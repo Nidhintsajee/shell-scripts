@@ -1,5 +1,4 @@
-for test -f `ls -a`
+for i in $(find . -type f -name "*[A-Z]*");
 do 
-	$file='	`ls -a`|`tr '[:upper:]' '[:lower:]'`'	
-	echo $file
+	mv "$i" "$(echo $i|tr A-Z a-z)";
 done
