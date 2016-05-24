@@ -1,0 +1,5 @@
+for test -f `ls -a`
+do 
+	$file='	`ls -a`|`tr '[:upper:]' '[:lower:]'`'	
+	echo $file
+done
